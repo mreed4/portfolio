@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+::selection {
+  background-color: tomato;
+}
+
+body {
+  background-color: hsl(40, 45%, 91%);
+  font-size: 1em;
+  padding: 1em;
+  color: #222;
+}
+
+main {
+  display: grid;
+  grid: repeat(24, 1fr) / repeat(7, 1fr);
+}
+
+main > div {
+  /*
+  border: 1px solid gray;
+  */
+}
+
+h1,
+h2 {
+  font-family: "Prata", serif;
+}
+
+h1 {
+  font-family: "Prata", serif;
+  font-size: 400%;
+  color: tomato;
+}
+
+h1::selection {
+  background-color: #222;
+}
+
+h1 span {
+  color: #222;
+  font-family: "Prata", serif;
+}
+
+#title {
+  grid-column: 2 / span 4;
+  grid-row: 2;
+  user-select: none;
+}
