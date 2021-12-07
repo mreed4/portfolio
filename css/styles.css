@@ -8,7 +8,8 @@
 }
 
 ::selection {
-  background-color: tomato;
+  background-color: #222;
+  color: hsl(40, 45%, 91%);
 }
 
 body {
@@ -18,39 +19,167 @@ body {
   color: #222;
 }
 
+header,
 main {
   display: grid;
-  grid: repeat(24, 1fr) / repeat(7, 1fr);
 }
 
-main > div {
-  /*
-  border: 1px solid gray;
-  */
+header {
+  grid: 1fr / repeat(7, 1fr);
+}
+
+header > div,
+nav ul li {
+  font-size: 160%;
+}
+
+header > div {
+  font-weight: 900;
+  grid-column: 2 / span 2;
+}
+
+nav {
+  grid-column: 4 / span 3;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  padding: 0 1em;
+}
+
+main {
+  grid: repeat(35, 1fr) / repeat(7, 1fr);
 }
 
 h1,
 h2 {
   font-family: "Prata", serif;
+  user-select: none;
+}
+h1 span,
+h2 span {
+  font-family: "Prata", serif;
 }
 
 h1 {
-  font-family: "Prata", serif;
   font-size: 400%;
   color: tomato;
 }
 
-h1::selection {
-  background-color: #222;
-}
-
 h1 span {
   color: #222;
-  font-family: "Prata", serif;
+}
+
+h2 {
+  font-size: 350%;
+}
+
+h2 span {
+  color: tomato;
+}
+
+section {
+  grid-column: 2 / span 5;
+}
+
+p {
+  max-width: 1000px;
+  font-size: 125%;
+}
+
+p.larger {
+  font-size: 155%;
 }
 
 #title {
-  grid-column: 2 / span 4;
-  grid-row: 2;
-  user-select: none;
+  grid-row: 5 / span 2;
+}
+
+#works {
+  grid-row: 11 / span 7;
+}
+
+#about {
+  grid-row: 20 / span 7;
+}
+
+#contact {
+  grid-row: 29 / span 7;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    grid: repeat(2, 1fr) / repeat(7, 1fr);
+  }
+
+  nav {
+    grid-column: 2 / span 6;
+    grid-row: 2 / span 1;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav ul li:nth-child(1) {
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 325%;
+  }
+
+  h2 {
+    font-size: 250%;
+  }
+
+  p {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header > div,
+  nav ul li {
+    font-size: 90%;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  h2 {
+    font-size: 125%;
+  }
+
+  p {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header > div {
+    grid-column: 2 / span 3;
+  }
+
+  h1 {
+    font-size: 150%;
+  }
+
+  h2 {
+    font-size: 115%;
+  }
+
+  p {
+    font-size: 85%;
+  }
+
+  p.larger {
+    font-size: 90%;
+  }
 }
