@@ -62,7 +62,11 @@ h2 {
 }
 
 section {
-  margin: 40vh 0;
+  padding: 10vh 0 40vh;
+}
+
+#title {
+  padding-top: 25vh;
 }
 
 p {
@@ -144,6 +148,10 @@ p span.emoji {
 }
 
 @media only screen and (max-width: 768px) {
+  header,
+  main {
+    padding: 0;
+  }
   h1 {
     font-size: 325%;
   }
@@ -186,9 +194,6 @@ p span.emoji {
 }
 
 @media only screen and (max-width: 375px) {
-  header > div {
-  }
-
   h1 {
     font-size: 150%;
   }
