@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
 }
-
 ::selection {
   background-color: #222;
   color: hsl(40, 45%, 91%);
@@ -19,9 +18,19 @@ body {
   color: #222;
 }
 
-header > div,
-nav ul li {
+a {
+  color: inherit;
+}
+
+header,
+main {
+  padding: 0 20vw;
+}
+
+header {
   font-size: 160%;
+  display: flex;
+  justify-content: space-between;
 }
 
 header > div {
@@ -39,9 +48,7 @@ nav ul li {
 }
 
 h1,
-h2,
-h1 span,
-h2 span {
+h2 {
   font-family: "Prata", serif;
 }
 
@@ -50,23 +57,25 @@ h1 {
   color: tomato;
 }
 
-h1 span {
-  color: #222;
-}
-
 h2 {
   font-size: 350%;
 }
 
-h2 span {
-  color: tomato;
+section {
+  margin: 40vh 0;
 }
 
 p {
   max-width: 1000px;
   font-size: 120%;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 1em;
+}
+
+p sup {
+  font-size: 50%;
+  margin-left: 3px;
+  color: tomato;
 }
 
 p.larger {
@@ -74,21 +83,67 @@ p.larger {
   line-height: normal;
 }
 
+p.smaller {
+  font-size: 110%;
+  font-style: italic;
+}
+
+p.right {
+  text-align: right;
+  padding-right: 6em;
+}
+
+p.center {
+  text-align: center;
+}
+
+p.bold {
+  font-weight: 900;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.footnotes {
+  font-size: 80%;
+  margin-bottom: 3em;
+}
+
+p.footnotes span {
+  display: block;
+}
+
+p.end,
+p.tldr {
+  font-size: 190%;
+  line-height: normal;
+}
+
+p.tldr {
+  color: tomato;
+}
+
+p.end {
+  padding: 3em 0;
+}
+p span.info {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: help;
+}
+
+p span.highlight {
+  background-color: hsl(59, 100%, 75%);
+}
+
+p span.emoji {
+  font-size: 60%;
+  display: inline-block;
+  line-height: 1.8;
+}
+
 @media only screen and (max-width: 768px) {
-  header {
-  }
-
-  nav {
-  }
-
-  nav ul {
-    justify-content: flex-start;
-  }
-
-  nav ul li:nth-child(1) {
-    padding-left: 0;
-  }
-
   h1 {
     font-size: 325%;
   }
@@ -103,9 +158,17 @@ p.larger {
 }
 
 @media only screen and (max-width: 425px) {
-  header > div,
-  nav ul li {
-    font-size: 90%;
+  header {
+    flex-direction: column;
+    font-size: 120%;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav ul li:nth-child(1) {
+    padding-left: 0;
   }
 
   h1 {
@@ -116,8 +179,9 @@ p.larger {
     font-size: 125%;
   }
 
-  p {
-    font-size: 90%;
+  p,
+  p.larger {
+    font-size: 100%;
   }
 }
 
@@ -131,13 +195,5 @@ p.larger {
 
   h2 {
     font-size: 115%;
-  }
-
-  p {
-    font-size: 85%;
-  }
-
-  p.larger {
-    font-size: 90%;
   }
 }
