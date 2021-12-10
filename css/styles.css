@@ -75,7 +75,7 @@ section {
 
 p {
   max-width: 1000px;
-  font-size: 120%;
+  font-size: 150%;
   line-height: 1.8;
   margin-bottom: 1em;
 }
@@ -96,12 +96,7 @@ p sup {
 }
 
 .larger {
-  font-size: 150%;
-  line-height: normal;
-}
-
-.largest {
-  font-size: 190%;
+  font-size: 200%;
   line-height: normal;
 }
 
@@ -150,7 +145,7 @@ p sup {
 }
 
 .fab {
-  font-size: 200%;
+  font-size: 300%;
   color: hsla(0, 0%, 13.3%, 0.4);
 }
 
@@ -187,12 +182,25 @@ p sup {
     padding: 0 5vw;
   }
 
+  header {
+    font-size: 120%;
+  }
+
   h1 {
     font-size: 300%;
   }
 
   h2 {
     font-size: 250%;
+  }
+
+  p {
+    font-size: 110%;
+    line-height: 1.5;
+  }
+
+  .larger {
+    font-size: 130%;
   }
 
   #contact .largest {
@@ -212,7 +220,6 @@ p sup {
 
   header {
     flex-direction: column;
-    font-size: 120%;
   }
 
   nav ul {
@@ -225,10 +232,6 @@ p sup {
 
   nav ul li:nth-child(3) {
     padding-right: 0;
-  }
-
-  #about {
-    font-size: 85%;
   }
 
   #title {
