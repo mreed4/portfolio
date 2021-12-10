@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/c41c81dd84.js" crossorigin="anonymous"></script>
 
     <script src="js/scripts.js" async></script>
     <!--https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup-->
@@ -25,29 +26,39 @@
     </header>
     <main>
       <section id="title">
-        <h1>This is a Portfolio</h1>
+        <h1>This is <span class="small-screen">a Portfolio</span></h1>
       </section>
       <section id="works">
         <h2>Works</h2>
-        <p></p>
+        <div class="w">
+          <div></div>
+        </div>
       </section>
       <section id="about">
         <h2>About</h2>
         <p class="larger">
-          I am a millenial California native born and raised in the the Bay Area though I have spent the last twenty years in San Diego.
+          I am a millenial and a California native, born and raised in the the Bay Area, who has spent the last twenty years in San Diego.
         </p>
         <p>
-          I have a fiancée&mdash;Brittni&mdash;and a little boy on the way! I enjoy music, <em>good</em> beer, cooking, and my single-speed
-          bicycle<!--<sup>1</sup>-->. I reject virtually all forms of social media<!--<sup>2</sup>-->.
+          I have a fiancée and a little boy on the way. I enjoy music, <em>good</em> beer, cooking, and my single-speed bicycle. I reject
+          virtually all forms of social media.
         </p>
         <p>
-          Right now I use <strong>HTML</strong>, <strong>CSS</strong>, and small amounts of <strong>vanilla Javascript</strong>. One of my
-          goals is to develop a Javascript powered Markdown based blog platform, ideally using Express for the backend. Codecademy Pro, The
-          Odin Project, Free Code Camp, and many other resources are providing me with the knowledge and education so far.
+          Right now I use <strong class="accent">HTML</strong>, <strong class="accent">CSS</strong>, and small amounts of
+          <strong class="accent">vanilla Javascript</strong>. One of my goals is to develop from scratch a Javascript powered Markdown based
+          blog platform, ideally using Express for the backend. Codecademy Pro, The Odin Project, Free Code Camp, and many other resources
+          are providing me with the knowledge and education so far.
+        </p>
+        <p class="largest center no-select">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
         </p>
       </section>
       <section id="contact">
         <h2>Contact</h2>
+        <p>No social media for me! Mostly&hellip;</p>
+        <p class="largest center no-select accent">hello<em>@</em>madare.co</p>
       </section>
     </main>
   </body>
