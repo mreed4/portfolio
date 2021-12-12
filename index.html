@@ -15,7 +15,7 @@
 
   <body>
     <header>
-      <div><a href="">Matthew Reed</a></div>
+      <div class="bold"><a href="">Matthew Reed</a></div>
       <nav>
         <ul>
           <li><a href="#works">Works</a></li>
@@ -26,19 +26,17 @@
     </header>
     <main>
       <section id="title">
-        <h1>This is <span class="small-screen">a Portfolio</span></h1>
+        <h1><span>&Gt; hello world</span>This is <span class="small-screen">a Portfolio</span></h1>
       </section>
       <section id="works">
         <h2>Works</h2>
-        <div class="w">
-          <div></div>
-        </div>
+        <div id="works-mockup">Test</div>
       </section>
       <section id="about">
         <h2>About</h2>
         <p class="larger justify darker">
-          <img id="self" src="./images/self-v.jpg" alt="Photo of the developer" class="small-screen" />
-          I am a California native, born and raised in the the Bay Area, who has spent the last twenty years in San Diego. I have a
+          <img id="self" src="./images/self-v_s.jpg" alt="Photo of the developer" class="small-screen" />
+          I am a California native, born and raised in the the Bay Area, though I have spent most of my life in San Diego. I have a
           fiancée&mdash;Brittni&mdash;and a little boy on the way.
         </p>
         <p class="justify">
@@ -51,23 +49,46 @@
           backend. Codecademy Pro, The Odin Project, Free Code Camp, and many other resources are providing me with the knowledge and
           education so far.
         </p>
-        <h3>Skillset</h3>
-        <p class="largest center no-select">
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js"></i>
-        </p>
+        <h3>tl;dr Skillset</h3>
+        <ul class="center no-select">
+          <li><i class="fab fa-html5"></i></li>
+          <li><i class="fab fa-css3-alt"></i></li>
+          <li><i class="fab fa-js"></i></li>
+        </ul>
       </section>
       <section id="contact">
         <h2>Contact</h2>
         <p class="larger">
           <span class="blackout no-select">No "traditional" social media for me!</span>
         </p>
-        <p>You can however find me on Dev.to, Discord, GitHub, and Hashnode. Email too of course (how 90s!)</p>
-        <ul class="center no-select accent">
-          <li class="largest">hello<em>@</em>madare.co</li>
+        <p>You can however find me on Codepen, Discord, GitHub, and Hashnode. Old fashioned email is an option too course (how 90s!)</p>
+        <ul class="no-select">
+          <li class="larger">
+            <img src="./images/icons/codepen.png" alt="" class="icon desat" />
+            <span><a href="">mreed4</a></span>
+          </li>
+          <li class="larger">
+            <img src="./images/icons/discord.png" alt="" class="icon desat" />
+            <span>mreed#7521</span>
+          </li>
+          <li class="larger">
+            <img src="./images/icons/github.png" alt="" class="icon desat" />
+            <span>mreed4</span>
+          </li>
+          <li class="larger">
+            <img src="./images/icons/hashnode.png" alt="" class="icon desat" />
+            <span><a href="">mreed</a></span>
+          </li>
+          <!--
+          <li class="accent larger">
+            <i class="far fa-envelope"></i>
+            <span>hello<em>@</em>madare.co</span>
+          </li>
+          -->
         </ul>
+        <p class="largest accent center no-select"><i class="far fa-envelope"></i> <span>hello<em>@</em>madare.co</span></p>
       </section>
     </main>
+    <footer class="center no-select"><span>&copy; 2021 Madare.co</span></footer>
   </body>
 </html>
