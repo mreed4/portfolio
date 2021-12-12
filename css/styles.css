@@ -227,6 +227,10 @@ Section - Works
 */
 
 #works-mockup {
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 30vw;
+  padding: 0.5em;
 }
 
 /*
