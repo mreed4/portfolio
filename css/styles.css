@@ -125,9 +125,12 @@ CLASSES
   display: inline;
 }
 
+.smallest {
+  font-size: 75%;
+}
+
 .smaller {
   font-size: 110%;
-  font-style: italic;
 }
 
 .larger {
@@ -176,6 +179,7 @@ CLASSES
 .darker {
   color: black;
 }
+
 .blackout {
   background-color: #222;
   color: hsl(40, 45%, 91%);
@@ -205,8 +209,37 @@ CLASSES
   width: 32px;
 }
 
+.em {
+  font-size: 75%;
+}
+
 .desat {
   filter: saturate(0) contrast(100) opacity(0.75);
+}
+
+.desat-minor {
+  filter: saturate(0.05) opacity(0.6);
+  transition: filter 150ms ease-in;
+}
+
+.desat-minor:hover {
+  filter: saturate(1) opacity(1);
+}
+
+.tags {
+  margin-bottom: 0.5em;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.separator {
+  width: 75%;
 }
 
 /*
@@ -226,11 +259,42 @@ Section - Works
 
 */
 
-#works-mockup {
-  background-color: rgba(0, 0, 0, 0.15);
-  width: 100%;
-  height: 30vw;
+.work-card {
+  /*
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   padding: 0.5em;
+  */
+  margin: 3em 0 12em;
+  position: relative;
+}
+
+.work-card:last-child {
+  margin-bottom: 0;
+}
+
+.work-preview {
+  width: 100%;
+  border-radius: 9px;
+  margin-top: 2em;
+}
+
+.work-number {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -2em;
+  font-size: 700%;
+  color: rgba(0, 0, 0, 0.1);
+  color: hsl(40, 45%, 83%);
+  text-shadow: 0px 2px 0 hsl(40, 45%, 97%), 0px -2px 0 hsl(40, 45%, 73%);
+  width: 2em;
+  text-align: right;
+  padding-right: 0.25em;
+}
+
+.work-number sup {
+  font-size: 50%;
 }
 
 /*
@@ -256,15 +320,14 @@ Section - About
 
 #self {
   /* #about p img */
-  width: 30%;
+  width: 35%;
   max-width: 350px;
   float: right;
   clear: both;
-  filter: saturate(0.05) opacity(0.7) brightness(0.9) contrast(2);
+  filter: saturate(0.05) opacity(0.6) brightness(0.9) contrast(1.7);
   margin-left: 1em;
   margin-top: 0.5em;
   border-radius: 4px;
-  border: 6px solid hsla(0, 0%, 13.3%, 0.4);
 }
 
 /*
@@ -344,9 +407,8 @@ Responsive
     font-size: 130%;
   }
 
-  #about p img#self {
+  #self {
     width: 37%;
-    box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.15);
   }
 
   #contact .largest {
@@ -386,7 +448,7 @@ Responsive
     height: 70vh;
   }
 
-  #about p img#self {
+  #self {
     float: none;
     width: 100%;
     border-width: 0;
@@ -396,5 +458,9 @@ Responsive
 
   .small-screen {
     display: block;
+  }
+
+  #contact ul li img {
+    width: 30%;
   }
 }
