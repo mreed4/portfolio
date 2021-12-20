@@ -13,6 +13,20 @@ discord.addEventListener(`mouseout`, function () {
 });
 */
 
+// Day/night toggle
+const toggle = document.querySelector(`button.toggle`);
+toggle.addEventListener(`click`, themeToggle);
+
+function themeToggle() {
+  let body = document.body;
+
+  if (!body.classList.contains(`night`)) {
+    body.classList.add(`night`);
+  } else {
+    body.classList.remove(`night`);
+  }
+}
+
 // Opens all external links in new tab
 // https://gist.github.com/CrocoDillon/7989214
 let links = [...document.links].forEach((link) => {

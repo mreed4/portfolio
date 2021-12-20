@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c41c81dd84.js" crossorigin="anonymous"></script>
 
     <script src="js/scripts.js" async></script>
@@ -15,8 +15,9 @@
   </head>
 
   <body>
+    <button class="toggle">Test</button>
     <header>
-      <div><a class="bold" href="">Matthew Reed</a></div>
+      <div><a class="bold darker" href="">Matthew Reed</a></div>
       <nav>
         <ul>
           <li><a href="#works">Works</a></li>
@@ -36,45 +37,49 @@
           resources.
         </p>
         <div class="work-card">
-          <span class="work-number no-select"><!--n<sup>o</sup>/-->01/</span>
+          <span class="work-number no-select">01/</span>
           <div>
             <h3>Club Struttgart</h3>
-            <p class="tags smallest no-select">
-              <span class="tag">Responsive</span>
-              <span class="tag">WIP</span>
-              <span class="tag">Codecademy Project</span>
-            </p>
             <p class="smaller">
               The intent of this project was to create a responsive page or site for a made up or actual "club". I personally love Porsches,
-              so I made up a local car club. Unfortunately and unsurprisingly, I do not own a Porsche &hellip; <i class="em em-upside_down_face" aria-role="presentation" aria-label="UPSIDE-DOWN FACE"></i>. The color scheme is inspired by the Porsche brand colors. Overall still needs some work in terms of its completedness, but I think
-              it checked all the boxes.
+              so I made up a local car club. Unfortunately and unsurprisingly, I do not own a Porsche &hellip;
+              <i class="em em-upside_down_face" aria-role="presentation" aria-label="UPSIDE-DOWN FACE"></i>. The color scheme is inspired by
+              the Porsche brand colors. Overall still needs some work in terms of its completedness, but I think it checked all the boxes.
             </p>
             <p class="smaller">
-              Check it out <a href="https://mreed4.github.io/responsive-club/">Live</a>, or browse the <a href="https://github.com/mreed4/responsive-club">Repo</a>. If you have a Codecademy account, check out the <a href="https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-making-a-website-responsive/modules/fecp-challenge-project-responsive-club-website/projects/responsive-club-website">Project page</a> or the <a href="https://discuss.codecademy.com/t/responsive-club-website-css/462382">forum thread</a> about
-              the project.
+              Check it out <a href="https://mreed4.github.io/responsive-club/">Live</a>, or browse the
+              <a href="https://github.com/mreed4/responsive-club">Repo</a>. If you have a Codecademy account, check out the
+              <a
+                href="https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-making-a-website-responsive/modules/fecp-challenge-project-responsive-club-website/projects/responsive-club-website"
+                >Project page</a
+              >
+              or the <a href="https://discuss.codecademy.com/t/responsive-club-website-css/462382">forum thread</a> about the project.
             </p>
           </div>
           <div>
             <video autoplay loop muted class="work-preview desat-minor" src="./images/works/struttgart.webm" />
           </div>
+          <hr class="separator" />
         </div>
         <div class="work-card">
-          <span class="work-number no-select"><!--n<sup>o</sup>/-->02/</span>
+          <span class="work-number no-select">02/</span>
           <div>
             <h3>Design System</h3>
-            <!--
-            <p class="tags smallest">
-              <span class="tag no-select">Responsive</span>
-              <span class="tag no-select">WIP</span>
-              <span class="tag no-select">Codecademy Project</span>
-            </p>
-            -->
             <p class="smaller">
-              Here I was to create a "design system"&mdash;perhaps something like Bootstrap's design language&mdash;to show that I know CSS and basic design principles, including colors and typography. I wanted the presentation page itself to be something other than white, so I went with a gray and light gray to show off the elements. This page is not responsive.
+              Here I was to create a "design system"&mdash;perhaps something like Bootstrap's design language&mdash;to show that I know CSS
+              and basic design principles, including colors and typography. I wanted the presentation page itself to be something other than
+              white, so I went with a gray and light gray to show off the elements. This page is not responsive&mdash;yet.
             </p>
             <p class="smaller">
-              Check it out <a href="https://mreed4.github.io/design-system/">Live</a>, or browse the <a href="https://github.com/mreed4/design-system">Repo</a>. If you have a Codecademy account, check out the <a href="https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-improved-styling-with-css/modules/fecp-challenge-project-build-a-website-design-system/projects/independent-project-web-design-system">Project page</a> or the <a href="https://discuss.codecademy.com/t/build-a-website-style-guide-challenge-project-html-css/462395">forum thread</a> about
-              the project.
+              Check it out <a href="https://mreed4.github.io/design-system/">Live</a>, or browse the
+              <a href="https://github.com/mreed4/design-system">Repo</a>. If you have a Codecademy account, check out the
+              <a
+                href="https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-improved-styling-with-css/modules/fecp-challenge-project-build-a-website-design-system/projects/independent-project-web-design-system"
+                >Project page</a
+              >
+              or the
+              <a href="https://discuss.codecademy.com/t/build-a-website-style-guide-challenge-project-html-css/462395">forum thread</a>
+              about the project.
             </p>
           </div>
           <div>
@@ -91,7 +96,8 @@
         </p>
         <p class="justify">
           Right now I use <strong class="darker">HTML</strong>, <strong class="darker">CSS</strong>, and small amounts of
-          <strong class="darker">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a long way to go in my Javascript journey.
+          <strong class="darker">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a long way
+          to go in my Javascript journey.
         </p>
         <p>
           One of my goals is to develop from scratch a Javascript powered Markdown based blog platform, ideally using Express for the
@@ -107,35 +113,14 @@
       </section>
       <section id="contact">
         <h2>Contact</h2>
-        <p class="larger">
-          <span class="no-select">No "traditional" social media for me!</span> <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+        <p class="larger no-select">
+          <span class="darker">No "traditional" social media for me!</span>
+          <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
         </p>
         <p>You can however find me on Codepen, Discord, GitHub, and Hashnode. Old fashioned email is an option too course (how 90s!)</p>
-          <!--
-        <ul class="no-select">
-          <li class="larger">
-            <img src="./images/icons/codepen.png" alt="" class="icon desat" />
-            <span><a href="">mreed4</a></span>
-          </li>
-          <li class="larger">
-            <img src="./images/icons/discord.png" alt="" class="icon desat" />
-            <span>mreed#7521</span>
-          </li>
-          <li class="larger">
-            <img src="./images/icons/github.png" alt="" class="icon desat" />
-            <span>mreed4</span>
-          </li>
-          <li class="larger">
-            <img src="./images/icons/hashnode.png" alt="" class="icon desat" />
-            <span><a href="">mreed</a></span>
-          </li>
-          <li class="accent larger">
-            <i class="far fa-envelope"></i>
-            <span>hello<em>@</em>madare.co</span>
-          </li>
-          -->
-        </ul>
-        <p class="largest accent center no-select"><i class="far fa-envelope"></i> <span>hello<em>@</em>madare.co</span></p>
+        <p class="largest accent center no-select grow">
+          <a href="" class="no-underline"><i class="far fa-envelope"></i> <span>hello<em>@</em>madare.co</span></a>
+        </p>
       </section>
     </main>
     <footer class="center no-select"><span>&copy; 2021 Madare.co</span></footer>

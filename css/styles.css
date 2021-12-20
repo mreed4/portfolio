@@ -9,9 +9,23 @@
 
 ::selection {
   background-color: #222;
-  background-color: tomato;
+  background-color: hsla(9.1, 100%, 63.9%, 0.6);
+  /*
   color: hsl(40, 45%, 91%);
+  */
 }
+
+button.toggle {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+/* 
+
+Theme - Light (default)
+
+*/
 
 body {
   background-color: hsl(40, 45%, 91%);
@@ -113,6 +127,50 @@ p sup {
   font-size: 45%;
   margin-left: 3px;
   color: tomato;
+}
+
+/* 
+
+Theme - Night
+
+*/
+
+body.night {
+  background-color: hsl(216, 18%, 16%);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.night .darker {
+  color: white;
+}
+
+body.night .work-number {
+  color: hsl(216, 18%, 13%);
+  text-shadow: 0px 2px 0 hsl(216, 18%, 18%), 0px -2px 0 hsl(216, 18%, 10%);
+  width: 2em;
+  text-align: right;
+  padding-right: 0.25em;
+}
+
+body.night h1 span:nth-child(1) {
+  color: white;
+}
+
+body.night h1,
+body.night h3 {
+  opacity: 0.9;
+}
+
+body.night h2 {
+  color: white;
+}
+
+body.night #self {
+  filter: saturate(0.05) opacity(0.4) brightness(1.05) contrast(1.8);
+}
+
+body.night #about .fab {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /*
@@ -239,7 +297,23 @@ CLASSES
 }
 
 .separator {
-  width: 75%;
+  width: 45%;
+  margin: 6em auto 0;
+  border-width: 0;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.grow {
+  transform: scale(1);
+  transition: transform 150ms linear;
+}
+
+.grow:hover {
+  transform: scale(1.05);
 }
 
 /*
@@ -277,6 +351,15 @@ Section - Works
   width: 100%;
   border-radius: 9px;
   margin-top: 2em;
+  border-width: 0;
+  transition: border-width 350ms linear, transform 150ms linear;
+  transform: scale(1);
+}
+
+.work-preview:hover {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-width: 6px;
+  transform: scale(1.05);
 }
 
 .work-number {
@@ -285,7 +368,6 @@ Section - Works
   top: 0;
   left: -2em;
   font-size: 700%;
-  color: rgba(0, 0, 0, 0.1);
   color: hsl(40, 45%, 83%);
   text-shadow: 0px 2px 0 hsl(40, 45%, 97%), 0px -2px 0 hsl(40, 45%, 73%);
   width: 2em;
@@ -363,6 +445,34 @@ Section - Contact
 
 #contact > p:last-child {
   margin-top: 2em;
+}
+
+.em-wave {
+  /*
+  animation: wave 1s infinite;
+  */
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  35% {
+    transform: rotate(-6deg);
+  }
+
+  45% {
+    transform: rotate(3deg);
+  }
+
+  65% {
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform: rotate(6deg);
+  }
 }
 
 /*
