@@ -9,7 +9,7 @@
 
 ::selection {
   background-color: #222;
-  background-color: hsla(9.1, 100%, 63.9%, 0.6);
+  background-color: hsla(9.1, 100%, 63.9%, 0.8);
   /*
   color: hsl(40, 45%, 91%);
   */
@@ -19,6 +19,7 @@ button.toggle {
   position: fixed;
   bottom: 1em;
   right: 1em;
+  z-index: 1000;
 }
 
 /* 
@@ -135,6 +136,13 @@ Theme - Night
 
 */
 
+body.night ::selection {
+  background-color: hsla(9.1, 100%, 63.9%, 0.9);
+  /*
+  color: hsl(40, 45%, 91%);
+  */
+}
+
 body.night {
   background-color: hsl(216, 18%, 16%);
   color: rgba(255, 255, 255, 0.8);
@@ -166,7 +174,7 @@ body.night h2 {
 }
 
 body.night #self {
-  filter: saturate(0.05) opacity(0.4) brightness(1.05) contrast(1.8);
+  filter: saturate(0.05) opacity(0.8) brightness(0.8) contrast(1.6);
 }
 
 body.night #about .fab {
@@ -276,7 +284,7 @@ CLASSES
 }
 
 .desat-minor {
-  filter: saturate(0.05) opacity(0.6);
+  filter: saturate(0.05) opacity(0.5);
   transition: filter 150ms ease-in;
 }
 
@@ -351,15 +359,6 @@ Section - Works
   width: 100%;
   border-radius: 9px;
   margin-top: 2em;
-  border-width: 0;
-  transition: border-width 350ms linear, transform 150ms linear;
-  transform: scale(1);
-}
-
-.work-preview:hover {
-  border: 6px solid rgba(0, 0, 0, 0.1);
-  border-width: 6px;
-  transform: scale(1.05);
 }
 
 .work-number {
@@ -406,7 +405,7 @@ Section - About
   max-width: 350px;
   float: right;
   clear: both;
-  filter: saturate(0.05) opacity(0.6) brightness(0.9) contrast(1.7);
+  filter: saturate(0.01) opacity(0.7) brightness(0.9) contrast(1.7);
   margin-left: 1em;
   margin-top: 0.5em;
   border-radius: 4px;
