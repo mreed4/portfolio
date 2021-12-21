@@ -24,7 +24,10 @@ toggle.addEventListener(`click`, modeToggle);
 let mode = localStorage.getItem(`mode`);
 
 const modeDay = () => {
+  /*
   body.classList.remove(`night`);
+  */
+  body.removeAttribute(`class`);
   localStorage.setItem(`mode`, `day`);
 
   icon.classList.remove(`em-sunny`);

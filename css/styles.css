@@ -28,13 +28,13 @@ button.toggle {
   border-radius: 70px;
   height: 60px;
   width: 60px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: hsla(39, 7%, 62%, 0.98);
   line-height: 0.9;
 }
 
 button.toggle:hover {
   transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: hsla(39, 7%, 72%, 0.98);
 }
 
 /* 
@@ -110,7 +110,6 @@ h1,
 h2,
 h3 {
   user-select: none;
-  font-weight: 100;
 }
 
 h1 {
@@ -180,6 +179,14 @@ body.night ::selection {
 body.night {
   background-color: hsl(216, 18%, 16%);
   color: rgba(255, 255, 255, 0.8);
+}
+
+body.night button.toggle {
+  background-color: hsla(215, 19%, 6%, 0.98);
+}
+
+body.night button.toggle:hover {
+  background-color: hsla(215, 19%, 12%, 0.98);
 }
 
 body.night nav ul li:hover {
