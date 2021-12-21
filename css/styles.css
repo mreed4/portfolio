@@ -20,6 +20,21 @@ button.toggle {
   bottom: 1em;
   right: 1em;
   z-index: 1000;
+  font-size: 150%;
+  background-color: transparent;
+  border: 0;
+  transition: all 150ms linear;
+  cursor: pointer;
+  border-radius: 70px;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 0.9;
+}
+
+button.toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* 
@@ -77,6 +92,12 @@ nav ul {
 
 nav ul li {
   padding: 0 1em;
+  transition: all 150ms linear;
+}
+
+nav ul li:hover {
+  color: black;
+  transform: translateY(-6px);
 }
 
 h1,
@@ -106,11 +127,24 @@ h3 {
   font-weight: normal;
 }
 
-h1 span:nth-child(1) {
+h1 > span:nth-child(1) {
   display: block;
   color: #222;
   font-weight: normal;
   font-size: 70%;
+}
+
+h1 span:nth-child(1) span {
+  animation: blink 850ms infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 section {
@@ -148,6 +182,10 @@ body.night {
   color: rgba(255, 255, 255, 0.8);
 }
 
+body.night nav ul li:hover {
+  color: white;
+}
+
 body.night .darker {
   color: white;
 }
@@ -174,7 +212,10 @@ body.night h2 {
 }
 
 body.night #self {
-  filter: saturate(0.05) opacity(0.8) brightness(0.8) contrast(1.6);
+  filter: saturate(0.05) opacity(0.3) brightness(1.1) contrast(1.5);
+  /*
+  filter: saturate(0.01) opacity(0.7) brightness(0.9) contrast(1.7);
+  */
 }
 
 body.night #about .fab {
@@ -322,6 +363,20 @@ CLASSES
 
 .grow:hover {
   transform: scale(1.05);
+}
+
+.em-new_moon,
+.em-sunny {
+  animation: fade 850ms 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*
