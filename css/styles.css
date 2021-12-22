@@ -15,7 +15,17 @@
   */
 }
 
-button.toggle {
+/*
+
+Buttons
+
+*/
+
+#toggle-button {
+  /* 
+  Toggles day/night mode
+  Powered by Javascript
+  */
   position: fixed;
   bottom: 1em;
   right: 1em;
@@ -32,9 +42,18 @@ button.toggle {
   line-height: 0.9;
 }
 
-button.toggle:hover {
+#toggle-button:hover {
   transform: scale(1.1);
   background-color: hsla(39, 7%, 72%, 0.98);
+}
+
+#more-info-button {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  color: #222;
 }
 
 /* 
@@ -182,12 +201,16 @@ body.night {
   color: rgba(255, 255, 255, 0.8);
 }
 
-body.night button.toggle {
+body.night #toggle-button {
   background-color: hsla(215, 19%, 6%, 0.98);
 }
 
-body.night button.toggle:hover {
+body.night #toggle-button:hover {
   background-color: hsla(215, 19%, 12%, 0.98);
+}
+
+body.night #more-info-button {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 body.night nav ul li:hover {
@@ -364,9 +387,17 @@ CLASSES
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .grow {
   transform: scale(1);
   transition: transform 150ms linear;
+}
+
+.fade {
+  animation: fade 850ms 1;
 }
 
 .grow:hover {
@@ -469,7 +500,7 @@ Section - About
   float: right;
   clear: both;
   filter: saturate(0.01) opacity(0.7) brightness(0.9) contrast(1.7);
-  margin-left: 1em;
+  margin-left: 2em;
   margin-top: 0.5em;
   border-radius: 9px;
 }

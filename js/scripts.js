@@ -13,26 +13,54 @@ discord.addEventListener(`mouseout`, function () {
 });
 */
 
-// Day/night toggle
-// https://youtu.be/wodWDIdV9BY
-const toggle = document.querySelector(`button.toggle`);
 const body = document.body;
-const icon = toggle.querySelector(`i.em`);
 
-toggle.addEventListener(`click`, modeToggle);
+/*
+
+
+
+Show more info in "About"
+
+
+
+*/
+
+const moreInfoButton = document.querySelector(`#more-info-button`);
+const moreInfoSection = document.querySelector(`#more-info`);
+
+moreInfoButton.addEventListener(`click`, () => {
+  moreInfoSection.removeAttribute(`class`);
+  moreInfoButton.classList.add(`hidden`);
+  window.setTimeout(() => {
+    moreInfoSection.classList.add(`fade`);
+  }, 25);
+});
+
+/*
+
+
+
+Day/night toggle
+https://youtu.be/wodWDIdV9BY
+
+
+
+*/
+
+const toggleButton = document.querySelector(`#toggle-button`);
+const iconMode = toggleButton.querySelector(`i.em`);
+
+toggleButton.addEventListener(`click`, modeToggle);
 
 let mode = localStorage.getItem(`mode`);
 
 const modeDay = () => {
-  /*
-  body.classList.remove(`night`);
-  */
   body.removeAttribute(`class`);
   localStorage.setItem(`mode`, `day`);
 
-  icon.classList.remove(`em-sunny`);
+  iconMode.classList.remove(`em-sunny`);
   window.setTimeout(() => {
-    icon.classList.add(`em-new_moon`);
+    iconMode.classList.add(`em-new_moon`);
   }, 25);
 };
 
@@ -40,9 +68,9 @@ const modeNight = () => {
   body.classList.add(`night`);
   localStorage.setItem(`mode`, `night`);
 
-  icon.classList.remove(`em-new_moon`);
+  iconMode.classList.remove(`em-new_moon`);
   window.setTimeout(() => {
-    icon.classList.add(`em-sunny`);
+    iconMode.classList.add(`em-sunny`);
   }, 25);
 };
 
@@ -59,8 +87,13 @@ function modeToggle() {
   }
 }
 
-// Opens all external links in new tab
+/* 
+
+Opens all external links in new tab
 // https://gist.github.com/CrocoDillon/7989214
+
+*/
+
 let links = [...document.links].forEach((link) => {
   if (link.hostname != window.location.hostname) {
     link.target = "_blank";

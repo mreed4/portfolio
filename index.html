@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <button class="toggle">
+    <button id="toggle-button">
       <i class="em em-new_moon"></i>
     </button>
     <header>
@@ -94,21 +94,24 @@
       </section>
       <section id="about">
         <h2>About</h2>
-        <p class="larger justify darker">
-          <img id="self" src="./images/self-v_s.jpg" alt="Photo of the developer" class="small-screen" />
-          I am a California native, born and raised in the the Bay Area, though I have spent most of my life in San Diego. I have a
-          fiancée&mdash;Brittni&mdash;and a little boy on the way.
-        </p>
+        <img id="self" src="./images/self-v_s.jpg" alt="Photo of the developer" class="small-screen" />
         <p class="justify">
-          Right now I use <strong class="darker">HTML</strong>, <strong class="darker">CSS</strong>, and small amounts of
-          <strong class="darker">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a long way
-          to go in my Javascript journey.
+          I am a California native, born and raised in the the Bay Area <em>(though I have spent most of my life in San Diego)</em>. I have
+          a fiancée&mdash;Brittni&mdash;and a little boy on the way.
         </p>
-        <p>
-          One of my goals is to develop from scratch a Javascript powered Markdown based blog platform, ideally using Express for the
-          backend. Codecademy Pro, The Odin Project, Free Code Camp, and many other resources are providing me with the knowledge and
-          education so far.
-        </p>
+        <button id="more-info-button" class="larger">More &hellip;</button>
+        <div id="more-info" class="hidden">
+          <p class="justify">
+            Right now I use <strong class="darker">HTML</strong>, <strong class="darker">CSS</strong>, and small amounts of
+            <strong class="darker">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a long
+            way to go in my Javascript journey.
+          </p>
+          <p class="justify">
+            One of my goals is to develop from scratch a Javascript powered Markdown based blog platform, ideally using Express for the
+            backend. Codecademy Pro, The Odin Project, Free Code Camp, and many other resources are providing me with the knowledge and
+            education so far.
+          </p>
+        </div>
         <h3>tl;dr Skillset</h3>
         <ul class="center no-select">
           <li><i class="fab fa-html5"></i></li>
