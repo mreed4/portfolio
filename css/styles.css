@@ -54,20 +54,21 @@ Buttons
   border: 0;
   cursor: pointer;
   font-size: inherit;
-  color: inherit;
+
+  color: rgba(0, 0, 0, 0.7);
   animation: pulse1 1500ms infinite;
 }
 
 @keyframes pulse1 {
   0% {
-    color: inherit;
+    color: rgba(0, 0, 0, 0.7);
   }
   50% {
     color: black;
   }
 
   100% {
-    color: inherit;
+    color: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -91,11 +92,14 @@ a {
 
 p a {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
   transition: all 150ms linear;
+  text-decoration-color: rgba(0, 0, 0, 0.2);
 }
 
 p a:hover {
   color: tomato;
+  text-decoration-color: tomato;
 }
 
 header,
@@ -136,8 +140,10 @@ nav ul li:hover {
 }
 
 h1,
-h2,
-h1 span:nth-child(2) {
+h1 span:nth-child(2),
+h1 span:nth-child(2) span,
+h2 {
+  color: tomato;
   font-family: "Prata", serif;
 }
 
@@ -228,20 +234,20 @@ body.night #toggle-button:hover {
 }
 
 body.night #more-info-button {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.5);
   animation: pulse2 1500ms infinite;
 }
 
 @keyframes pulse2 {
   0% {
-    color: inherit;
+    color: rgba(255, 255, 255, 0.5);
   }
   50% {
     color: white;
   }
 
   100% {
-    color: inherit;
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -265,7 +271,7 @@ body.night .work-number {
   padding-right: 0.25em;
 }
 
-body.night h1 span:nth-child(1) {
+body.night h1 > span:nth-child(1) {
   color: white;
 }
 
@@ -279,7 +285,7 @@ body.night h2 {
 }
 
 body.night #self {
-  filter: saturate(0.05) opacity(0.3) brightness(1.1) contrast(1.5);
+  filter: saturate(0.05) opacity(0.4) brightness(1.1) contrast(1.5);
   /*
   filter: saturate(0.01) opacity(0.7) brightness(0.9) contrast(1.7);
   */
@@ -436,6 +442,10 @@ CLASSES
   animation: fade 850ms 1;
 }
 
+.fade-longer {
+  animation: fade 3s 1;
+}
+
 .grow:hover {
   transform: scale(1.05);
 }
@@ -447,6 +457,9 @@ CLASSES
 
 @keyframes fade {
   0% {
+    opacity: 0;
+  }
+  66% {
     opacity: 0;
   }
   100% {
