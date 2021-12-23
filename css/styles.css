@@ -443,7 +443,7 @@ CLASSES
 }
 
 .fade-longer {
-  animation: fade 3s 1;
+  animation: fade-delayed 3s 1;
 }
 
 .grow:hover {
@@ -455,11 +455,20 @@ CLASSES
   animation: fade 850ms 1;
 }
 
-@keyframes fade {
+@keyframes fade-delayed {
   0% {
     opacity: 0;
   }
   66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
     opacity: 0;
   }
   100% {
