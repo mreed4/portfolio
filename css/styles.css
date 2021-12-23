@@ -39,21 +39,36 @@ Buttons
   height: 60px;
   width: 60px;
   background-color: hsla(39, 7%, 62%, 0.98);
+  background-color: hsla(215, 19%, 6%, 0.98);
   line-height: 0.9;
 }
 
 #toggle-button:hover {
   transform: scale(1.1);
   background-color: hsla(39, 7%, 72%, 0.98);
+  background-color: hsla(215, 19%, 12%, 0.98);
 }
 
 #more-info-button {
   background-color: transparent;
   border: 0;
-  margin-bottom: 1em;
   cursor: pointer;
-  font-weight: bold;
-  color: #222;
+  font-size: inherit;
+  color: inherit;
+  animation: pulse1 1500ms infinite;
+}
+
+@keyframes pulse1 {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: black;
+  }
+
+  100% {
+    color: inherit;
+  }
 }
 
 /* 
@@ -112,6 +127,7 @@ nav ul {
 nav ul li {
   padding: 0 1em;
   transition: all 150ms linear;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 nav ul li:hover {
@@ -203,14 +219,34 @@ body.night {
 
 body.night #toggle-button {
   background-color: hsla(215, 19%, 6%, 0.98);
+  background-color: hsla(189, 100%, 38%, 0.95);
 }
 
 body.night #toggle-button:hover {
   background-color: hsla(215, 19%, 12%, 0.98);
+  background-color: hsla(185, 100%, 45%, 0.95);
 }
 
 body.night #more-info-button {
   color: rgba(255, 255, 255, 0.8);
+  animation: pulse2 1500ms infinite;
+}
+
+@keyframes pulse2 {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: inherit;
+  }
+}
+
+body.night nav ul li {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 body.night nav ul li:hover {
@@ -282,7 +318,7 @@ CLASSES
 
 .right {
   text-align: right;
-  padding-right: 6em;
+  padding-right: 3em;
 }
 
 .center {
@@ -426,7 +462,7 @@ Section - Title
 
 #title {
   padding-top: 27vh;
-  height: 80vh;
+  height: 100vh;
 }
 
 /*
