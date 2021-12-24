@@ -19,7 +19,7 @@
       <i class="em em-new_moon"></i>
     </button>
     <header class="no-select">
-      <div><a class="bold darker" href="">Matthew Reed</a></div>
+      <div><a class="bold more-contrast" href="">Matthew Reed</a></div>
       <nav>
         <ul>
           <li><a href="#works">Works</a></li>
@@ -32,12 +32,12 @@
       <section id="title">
         <h1>
           <span>&gt; hello world<span>|</span></span>
-          <span class="fade-longer">This is <span class="small-screen">a Portfolio</span></span>
+          <span class="fade-longer">This is a Portfolio</span>
         </h1>
       </section>
       <section id="works">
         <h2>Works</h2>
-        <p>
+        <p class="less-contrast italic smaller">
           At this point in my development path, most of if not all of the stuff below is the result of projects from Codecademy and other
           resources.
         </p>
@@ -62,7 +62,7 @@
             </p>
           </div>
           <div>
-            <video autoplay loop muted class="work-preview desat-minor" src="./images/works/struttgart.webm" />
+            <video autoplay loop muted class="work-preview desat-minor fade" src="./images/works/struttgart.webm" />
           </div>
           <hr class="separator" />
         </div>
@@ -86,27 +86,30 @@
               <a href="https://discuss.codecademy.com/t/build-a-website-style-guide-challenge-project-html-css/462395">forum thread</a>
               about the project.
             </p>
+            <!--
+            <button class="right more-info-button">See a preview!</button>
+            -->
           </div>
           <div>
-            <video autoplay loop muted class="work-preview desat-minor" src="./images/works/design-system.webm" />
+            <video autoplay loop muted class="work-preview desat-minor fade" src="./images/works/design-system.webm" />
           </div>
         </div>
       </section>
       <section id="about">
         <h2>About</h2>
-        <img id="self" src="./images/self-v_s.jpg" alt="Photo of the developer" class="small-screen" />
-        <p class="justify">
-          I am a California native, born and raised in the Bay Area. I now live in San Diego with my fiancée&mdash;Brittni&mdash;and we have
-          a little boy on the way. We also have a cat, Ziggy, named after a David Bowie stage persona.
+        <img id="self" src="./images/self-c.png" alt="Photo of the developer" class="small-screen" />
+        <p class="justify more-contrast larger">
+          I am a California native, born and raised in the Bay Area. I now live in San Diego with my fiancée&mdash;Brittni&mdash;with a
+          little boy on the way. We also have a cat, Ziggy, named after David Bowie's stage persona.
         </p>
-        <p class="right">
-          <button id="more-info-button" class="right">More &hellip;</button>
+        <p class="center">
+          <button class="more-info-button italic">Learn more&hellip;</button>
         </p>
-        <div id="more-info" class="hidden">
+        <div class="hidden more-info">
           <p class="justify">
-            Right now I use <strong class="darker">HTML</strong>, <strong class="darker">CSS</strong>, and small amounts of
-            <strong class="darker">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a long
-            way to go in my Javascript journey.
+            Right now I use <strong class="more-contrast">HTML</strong>, <strong class="more-contrast">CSS</strong>, and small amounts of
+            <strong class="more-contrast">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a
+            long way to go in my Javascript journey.
           </p>
           <p class="justify">
             One of my goals is to develop from scratch a Javascript powered Markdown based blog platform, ideally using Express for the
@@ -114,18 +117,20 @@
             education so far.
           </p>
         </div>
-        <h3>tl;dr Skillset</h3>
-        <ul class="center no-select">
-          <li><i class="fab fa-html5"></i></li>
-          <li><i class="fab fa-css3-alt"></i></li>
-          <li><i class="fab fa-js"></i></li>
-        </ul>
+        <div id="tldr-skillset">
+          <h3>tl;dr Skillset</h3>
+          <ul class="no-select">
+            <li><i class="fab fa-html5"></i></li>
+            <li><i class="fab fa-css3-alt"></i></li>
+            <li><i class="fab fa-js"></i></li>
+          </ul>
+        </div>
       </section>
       <section id="contact">
         <h2>Contact</h2>
         <p class="larger no-select">
-          <span class="darker">No "traditional" social media for me!</span>
-          <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+          <span class="more-contrast">No "traditional" social media for me!</span>
+          <i class="em em-v"></i>
         </p>
         <p>You can however find me on Codepen, Discord, GitHub, and Hashnode. Old fashioned email is an option too course (how 90s!)</p>
         <p class="largest accent center no-select grow">

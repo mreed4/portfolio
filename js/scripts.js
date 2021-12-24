@@ -2,33 +2,21 @@ const body = document.body;
 
 /*
 
-Smooth scrolling navigation
+Smooth scrolling navigation for every anchor link
 https://tinyurl.com/2wxpcvrd
-
-
 
 */
 
-// Define selector for selecting
-// anchor links with the hash
 let anchorSelector = 'a[href^="#"]';
 
-// Collect all such anchor links
 let anchorList = document.querySelectorAll(anchorSelector);
 
-// Iterate through each of the links
 anchorList.forEach((link) => {
   link.onclick = function (e) {
-    // Prevent scrolling if the
-    // hash value is blank
     e.preventDefault();
 
-    // Get the destination to scroll to
-    // using the hash property
     let destination = document.querySelector(this.hash);
 
-    // Scroll to the destination using
-    // scrollIntoView method
     destination.scrollIntoView({
       behavior: "smooth",
     });
@@ -39,27 +27,27 @@ anchorList.forEach((link) => {
 
 Show more - used in About, Works, etc.
 
-
-
 */
 
-const moreInfoButton = document.querySelector(`#more-info-button`);
-const moreInfoSection = document.querySelector(`#more-info`);
+const moreInfoButtons = document.querySelectorAll(`.more-info-button`);
+const moreInfoSections = document.querySelectorAll(`.more-info`);
+let skillset = document.querySelector(`#tldr-skillset`);
 
-moreInfoButton.addEventListener(`click`, () => {
-  moreInfoSection.removeAttribute(`class`);
-  moreInfoButton.classList.add(`hidden`);
-  window.setTimeout(() => {
-    moreInfoSection.classList.add(`fade`);
-  }, 25);
-});
+for (let i = 0; i < moreInfoButtons.length; i++) {
+  moreInfoButtons[i].addEventListener(`click`, () => {
+    moreInfoSections[i].classList.remove(`hidden`);
+    moreInfoButtons[i].classList.add(`hidden`);
+
+    window.setTimeout(() => {
+      moreInfoSections[i].classList.add(`fade`);
+    }, 25);
+  });
+}
 
 /*
 
 Day/night toggle
 https://youtu.be/wodWDIdV9BY
-
-
 
 */
 
