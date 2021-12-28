@@ -31,7 +31,6 @@ Show more - used in About, Works, etc.
 
 const moreInfoButtons = document.querySelectorAll(`.more-info-button`);
 const moreInfoSections = document.querySelectorAll(`.more-info`);
-let skillset = document.querySelector(`#tldr-skillset`);
 
 for (let i = 0; i < moreInfoButtons.length; i++) {
   moreInfoButtons[i].addEventListener(`click`, () => {

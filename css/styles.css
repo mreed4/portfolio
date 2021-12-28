@@ -445,7 +445,7 @@ Section - Works
   border-radius: 6px;
   padding: 0.5em;
   */
-  margin: 6em 0 12em;
+  margin: 6em 0;
   position: relative;
 }
 
@@ -549,7 +549,9 @@ Section - Contact
 }
 
 .em-v {
+  /*
   animation: wave 1s infinite;
+  */
 }
 
 /* 
