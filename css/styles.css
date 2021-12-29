@@ -128,6 +128,11 @@ Buttons
   cursor: pointer;
   font-size: inherit;
   animation: pulse 1500ms infinite;
+  transition: transform 150ms linear;
+}
+
+.more-info-button:hover {
+  transform: translateY(-4px);
 }
 
 /* 
@@ -172,7 +177,7 @@ a {
 p a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  transition: all 150ms linear;
+  transition: color 150ms linear, text-decoration-color 350ms linear;
   text-decoration-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -307,6 +312,7 @@ CLASSES
 .blackout {
   background-color: #222;
   color: hsl(40, 45%, 91%);
+  color: seagreen;
 }
 
 .highlight {
@@ -568,6 +574,14 @@ body.night {
   background-color: hsl(216, 18%, 16%);
   color: rgba(255, 255, 255, 0.8);
   transition: background-color 150ms linear, color 150ms linear;
+}
+
+body.night p a {
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+body.night p a:hover {
+  text-decoration-color: tomato;
 }
 
 body.night #toggle-button {
