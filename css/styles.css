@@ -219,9 +219,6 @@ p {
 
 p sup {
   font-size: 100%;
-  /*
-  margin-left: 3px;
-  */
   color: tomato;
   font-family: "Prata", serif;
 }
@@ -481,12 +478,7 @@ Section - Works
 */
 
 .work-card {
-  /*
-  border: 3px solid rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-  padding: 0.5em;
-  */
-  margin: 6em 0;
+  margin: 6em 0 12em;
   position: relative;
 }
 
@@ -498,6 +490,7 @@ Section - Works
   width: 100%;
   border-radius: 9px;
   margin-top: 2em;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .work-number {
@@ -544,6 +537,7 @@ Section - About
   max-width: 350px;
   float: right;
   clear: both;
+  filter: saturate(0.05) opacity(0.5) brightness(1.1) contrast(1.2);
   filter: saturate(1.1) opacity(1) brightness(1) contrast(1);
   margin-top: 0.2em;
   margin-left: 2em;
