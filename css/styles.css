@@ -871,6 +871,10 @@ Responsive
     display: block;
   }
 
+  .work-preview {
+    display: none;
+  }
+
   #contact p:nth-child(2) {
     text-align: center;
   }
