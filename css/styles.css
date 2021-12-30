@@ -22,6 +22,18 @@ body {
   transition: background-color 150ms linear, color 150ms linear;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  transition: color 150ms linear;
+}
+
+hr {
+  transition: border-top 150ms linear, border-bottom 150ms linear;
+}
+
 p a {
   transition: color 150ms linear, text-decoration-color 350ms linear;
 }
