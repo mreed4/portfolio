@@ -19,12 +19,12 @@
       <i class="em em-new_moon"></i>
     </button>
     <header class="no-select">
-      <div><a class="bold more-contrast" href="">Matthew Reed</a></div>
+      <div><a class="more-contrast" href="">Matthew Reed</a></div>
       <nav>
         <ul>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
     </header>
@@ -39,9 +39,18 @@
         <h2>Projects</h2>
         <p class="less-contrast italic smaller">
           At this point in my development path, most of if not all of the stuff below is the result of projects from Codecademy and other
-          resources.
+          resources. Click on the "Expand" buttons below in each project to see more context and information about each project.
         </p>
-        <article class="work-card">
+        <h4 class="more-contrast">Navigation</h4>
+        <nav>
+          <ol>
+            <li><a href="#struttgart">Club Struttgart</a></li>
+            <li><a href="#design-system">Design System</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ol>
+        </nav>
+        <hr class="separator" />
+        <article id="struttgart" class="work-card">
           <span class="work-number no-select">01</span>
           <div>
             <h3>Club Struttgart</h3>
@@ -62,20 +71,21 @@
               <button class="more-info-button">Expand &darr;</button>
             </p>
             <div class="hidden more-info">
+              <h4 class="more-contrast">Notes</h4>
               <p class="smaller">
-                Unfortunately and perhaps unsurprisingly, I do not own a Porsche &hellip;
+                Unfortunately and unsurprisingly, I do not own a Porsche &hellip;
                 <i class="em em-upside_down_face" aria-role="presentation" aria-label="UPSIDE-DOWN FACE"></i>. The color scheme is inspired
                 by the Porsche brand colors. Overall still needs some work in terms of its completeness, but I think it checked all the
                 boxes of this particular project/exercise.
               </p>
               <div>
-                <video autoplay loop muted class="work-preview fade" src="./images/works/struttgart.webm" />
+                <video autoplay loop muted class="work-preview fade" src="./images/works/struttgart.webm" width="500" />
               </div>
             </div>
           </div>
         </article>
         <hr class="separator" />
-        <article class="work-card">
+        <article id="design-system" class="work-card">
           <span class="work-number no-select">02</span>
           <div>
             <h3>Design System</h3>
@@ -98,18 +108,19 @@
               <button class="more-info-button">Expand &darr;</button>
             </p>
             <div class="hidden more-info">
+              <h4 class="more-contrast">Notes</h4>
               <p class="smaller">
                 I wanted the presentation page itself to be something other than stark white, so I went with a gray and light gray to show
                 off the elements. This page is not responsive&mdash;yet. It also may need some #a11y work in terms of its contrast.
               </p>
               <div>
-                <video autoplay loop muted class="work-preview fade" src="./images/works/design-system.webm" />
+                <video autoplay loop muted class="work-preview fade" src="./images/works/design-system.webm" width="500" />
               </div>
             </div>
           </div>
         </article>
         <hr class="separator" />
-        <article class="work-card">
+        <article id="portfolio" class="work-card">
           <span class="work-number no-select">03</span>
           <div>
             <h3>Portfolio</h3>
@@ -132,18 +143,31 @@
               <button class="more-info-button">Expand &darr;</button>
             </p>
             <div class="hidden more-info">
+              <h4 class="more-contrast">Notes</h4>
               <p class="smaller">
                 I kid, I kid. This was actually quite fun. Other than designing something that represents or captures my style, the goals
                 were relatively simple: make it responsive, use Git, use CSS to style it, and implement <em>some</em> Javascript. I think I
                 accomplished all the goals! This was probably my most involved hands on project &hellip; but not by much&mdash;I tend to
                 "over-design".
               </p>
-              <div>
-                <video autoplay loop muted class="work-preview fade" src="" />
-              </div>
+              <div><video autoplay loop muted class="work-preview fade" src="" width="500" />/></div>
             </div>
           </div>
         </article>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="larger no-select">
+          <span class="more-contrast">No "traditional" social media for me!</span>
+          <i class="em em-v"></i>
+        </p>
+        <p>
+          You can however find me on <a href="https://codepen.io/mreed4">Codepen</a>, <a href="https://github.com/mreed4">GitHub</a>, and
+          <a href="https://hashnode.com/@mreed">Hashnode</a>. Old fashioned email is an option too course (how 90s!)
+        </p>
+        <p class="largest accent center no-select grow">
+          <a href="" class="no-underline"><i class="far fa-envelope"></i> <span>hello<em>@</em>madare.co</span></a>
+        </p>
       </section>
       <section id="about">
         <h2>About</h2>
@@ -175,20 +199,6 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p class="larger no-select">
-          <span class="more-contrast">No "traditional" social media for me!</span>
-          <i class="em em-v"></i>
-        </p>
-        <p>
-          You can however find me on <a href="https://codepen.io/mreed4">Codepen</a>, <a href="https://github.com/mreed4">GitHub</a>, and
-          <a href="https://hashnode.com/@mreed">Hashnode</a>. Old fashioned email is an option too course (how 90s!)
-        </p>
-        <p class="largest accent center no-select grow">
-          <a href="" class="no-underline"><i class="far fa-envelope"></i> <span>hello<em>@</em>madare.co</span></a>
-        </p>
       </section>
     </main>
     <footer class="center no-select"><span>&copy; 2021 Madare.co</span></footer>

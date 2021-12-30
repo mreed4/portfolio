@@ -211,10 +211,9 @@ section {
 }
 
 p {
-  max-width: 1000px;
-  font-size: 150%;
+  font-size: 140%;
   line-height: 1.8;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
 }
 
 p sup {
@@ -242,6 +241,7 @@ p a:hover {
 header,
 main,
 footer {
+  max-width: 1000px;
   margin: 0 20vw;
 }
 
@@ -268,7 +268,8 @@ h1 span:nth-child(2) span {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   user-select: none;
 }
 
@@ -289,6 +290,11 @@ h2 {
 h3 {
   font-size: 200%;
   color: tomato;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 120%;
   font-weight: 100;
 }
 
@@ -388,6 +394,10 @@ CLASSES
 }
 
 .em {
+  /* 
+  These are emojis from afeld 
+  Similar to Font Awesome
+  */
   font-size: 75%;
 }
 
@@ -416,8 +426,7 @@ CLASSES
 }
 
 .separator {
-  width: 45%;
-  margin: 6em auto 0;
+  margin: 0 auto;
   border-width: 0;
   border-top: 3px solid rgba(0, 0, 0, 0.1);
 }
@@ -444,18 +453,18 @@ Header
 
 */
 
-nav ul {
+header nav ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
 }
 
-nav ul li {
+header nav ul li {
   padding: 0 1em;
   color: rgba(0, 0, 0, 0.7);
 }
 
-nav ul li:hover {
+header nav ul li:hover {
   color: black;
   transform: translateY(-4px);
 }
@@ -477,8 +486,28 @@ Section - Works
 
 */
 
+#projects nav ol {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 3em 0 6em;
+  font-size: 120%;
+
+  /* https://codepen.io/maddesigns/pen/JGQejg */
+  counter-reset: li;
+}
+
+#projects nav ol li:before {
+  color: tomato;
+  counter-increment: li;
+  content: counter(li, decimal-leading-zero) "/";
+}
+
 .work-card {
-  margin: 6em 0 12em;
+  /* These are also 'articles' */
+  padding: 3em 0;
+  margin: 9em 0;
   position: relative;
 }
 
@@ -496,7 +525,7 @@ Section - Works
 .work-number {
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 0.25em;
   left: -2em;
   font-size: 700%;
   color: hsl(40, 45%, 83%);
@@ -532,9 +561,8 @@ Section - About
 }
 
 #self {
-  /* #about p img */
   width: 35%;
-  max-width: 350px;
+  max-width: 250px;
   float: right;
   clear: both;
   filter: saturate(0.05) opacity(0.5) brightness(1.1) contrast(1.2);
@@ -557,6 +585,8 @@ Section - Contact
   padding: 0 9px 0 3px;
 }
 
+/* UNUSED
+
 #contact ul {
   list-style-type: none;
   margin: 2em 0 0 1em;
@@ -572,6 +602,8 @@ Section - Contact
 #contact ul li span {
   justify-self: left;
 }
+
+*/
 
 #contact > p:nth-child(2) {
   margin-top: 1em;
@@ -642,11 +674,6 @@ body.night h1 > span:nth-child(1) {
   color: white;
 }
 
-body.night h1,
-body.night h3 {
-  opacity: 0.9;
-}
-
 body.night h2 {
   color: white;
 }
@@ -685,7 +712,8 @@ Responsive
     width: 100%;
   }
 
-  h3 {
+  h3,
+  h4 {
     text-align: center;
   }
 
@@ -711,6 +739,7 @@ Responsive
 
   h2,
   h3,
+  h4,
   #about h3,
   #about ul {
     text-align: center;
@@ -736,6 +765,10 @@ Responsive
 
   .larger {
     font-size: 130%;
+  }
+
+  #projects nav ol {
+    display: block;
   }
 
   .work-number {
@@ -766,20 +799,24 @@ Responsive
     flex-direction: column;
   }
 
-  nav ul {
+  header nav ul {
     justify-content: flex-start;
   }
 
-  nav ul li:nth-child(1) {
+  header nav ul li:nth-child(1) {
     padding-left: 0;
   }
 
-  nav ul li:nth-child(3) {
+  header nav ul li:nth-child(3) {
     padding-right: 0;
   }
 
   #title {
     padding-top: 20vh;
+  }
+
+  .work-card {
+    padding: 3em 0 6em;
   }
 
   #self {
