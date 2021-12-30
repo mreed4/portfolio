@@ -335,6 +335,10 @@ h1 > span:nth-child(1) {
   font-size: 70%;
 }
 
+em {
+  font-family: inherit;
+}
+
 /*
 
 CLASSES
