@@ -210,6 +210,22 @@ section {
   padding: 8vh 0 40vh;
 }
 
+hr {
+  margin: 0 auto;
+  border-width: 0;
+  border-top: 2px solid hsl(40, 45%, 79%);
+  border-bottom: 2px solid hsl(40, 45%, 97%);
+  opacity: 0.9;
+  /*
+  text-shadow: 0px 2px 0 hsl(40, 45%, 97%), 0px -2px 0 hsl(40, 45%, 73%);
+  */
+}
+
+s {
+  text-decoration-thickness: 2px;
+  font-family: inherit;
+}
+
 p {
   font-size: 140%;
   line-height: 1.8;
@@ -233,6 +249,7 @@ p a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: rgba(0, 0, 0, 0.2);
+  text-underline-offset: 2px;
 }
 
 p a:hover {
@@ -429,13 +446,6 @@ CLASSES
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 2px;
 }
-
-.separator {
-  margin: 0 auto;
-  border-width: 0;
-  border-top: 3px solid rgba(0, 0, 0, 0.1);
-}
-
 .no-underline {
   text-decoration: none;
 }
@@ -694,6 +704,11 @@ body.night #self {
 
 body.night #about .fab {
   color: rgba(255, 255, 255, 0.4);
+}
+
+body.night hr {
+  border-top: 2px solid hsl(216, 18%, 12%);
+  border-bottom: 2px solid hsl(216, 18%, 19%);
 }
 
 /*
