@@ -97,9 +97,9 @@ https://youtu.be/wodWDIdV9BY
 
 const externalLinks = () => {
   /* 
-
-Opens all external links in new tab
-// https://gist.github.com/CrocoDillon/7989214
+  
+  Opens all external links in new tab
+  https://gist.github.com/CrocoDillon/7989214
 
 */
 

@@ -214,6 +214,7 @@ p {
   font-size: 140%;
   line-height: 1.8;
   margin: 0 0 1em;
+  font-family: "Prata", serif;
 }
 
 p sup {
@@ -225,6 +226,7 @@ p sup {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: inherit;
 }
 
 p a {
@@ -259,11 +261,11 @@ footer {
   color: rgba(0, 0, 0, 0.3);
 }
 
-h1,
-h1 span:nth-child(2),
-h1 span:nth-child(2) span {
+h1 span:nth-child(2) {
   color: tomato;
   font-family: "Prata", serif;
+  text-shadow: 0 1px 0 hsl(9, 59%, 51%), 0 2px 0 hsl(9, 59%, 51%), 0 3px 0 hsl(9, 59%, 51%), 0 4px 0 hsl(9, 59%, 51%),
+    0 5px 0 hsl(9, 59%, 51%);
 }
 
 h1,
@@ -295,7 +297,6 @@ h3 {
 
 h4 {
   font-size: 120%;
-  font-weight: 100;
 }
 
 h1 > span:nth-child(1) {
@@ -310,6 +311,10 @@ h1 > span:nth-child(1) {
 CLASSES
 
 */
+
+.prata {
+  font-family: "Prata", serif;
+}
 
 .small-screen {
   display: inline;
@@ -672,6 +677,11 @@ body.night .work-number {
 
 body.night h1 > span:nth-child(1) {
   color: white;
+}
+
+body.night h1 span:nth-child(2) {
+  text-shadow: 0 1px 0 hsl(9, 57%, 43%), 0 2px 0 hsl(9, 57%, 40%), 0 3px 0 hsl(9, 57%, 40%), 0 4px 0 hsl(9, 57%, 40%),
+    0 5px 0 hsl(9, 57%, 40%);
 }
 
 body.night h2 {
