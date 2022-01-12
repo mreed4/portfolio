@@ -68,7 +68,7 @@ https://youtu.be/wodWDIdV9BY
 */
 
   const toggleButton = document.querySelector(`#toggle-button`);
-  const iconMode = toggleButton.querySelector(`i.em`);
+  const iconMode = toggleButton.querySelector(`span.fas`);
 
   toggleButton.addEventListener(`click`, modeToggle);
 
@@ -78,9 +78,9 @@ https://youtu.be/wodWDIdV9BY
     body.removeAttribute(`class`);
     localStorage.setItem(`mode`, `day`);
 
-    iconMode.classList.remove(`em-sunny`);
+    iconMode.classList.remove(`fa-sun`);
     window.setTimeout(() => {
-      iconMode.classList.add(`em-new_moon`);
+      iconMode.classList.add(`fa-moon`);
     }, 25);
   };
 
@@ -88,9 +88,9 @@ https://youtu.be/wodWDIdV9BY
     body.classList.add(`night`);
     localStorage.setItem(`mode`, `night`);
 
-    iconMode.classList.remove(`em-new_moon`);
+    iconMode.classList.remove(`fa-moon`);
     window.setTimeout(() => {
-      iconMode.classList.add(`em-sunny`);
+      iconMode.classList.add(`fa-sun`);
     }, 25);
   };
 

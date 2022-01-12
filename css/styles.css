@@ -89,8 +89,8 @@ nav ul li {
   animation: fade-out 850ms 1;
 }
 
-.em-new_moon,
-.em-sunny {
+.fa-moon,
+.fa-sun {
   animation: fade 850ms 1;
 }
 
@@ -200,16 +200,34 @@ Buttons
   outline: 0;
   cursor: pointer;
   border-radius: 70px;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   background-color: hsla(215, 19%, 6%, 0.98);
   line-height: 0.9;
-  font-size: 115%;
+  font-size: 175%;
 }
 
 #toggle-button:hover {
   transform: scale(1.1);
   background-color: hsla(215, 19%, 12%, 0.98);
+}
+
+#toggle-button:hover > .fa-sun {
+  text-shadow: 0 0 1px transparent, 0 0 3px yellow;
+}
+
+#toggle-button:hover > .fa-moon {
+  text-shadow: 0 0 1px transparent, 0 0 3px #ccc;
+}
+
+.fa-moon {
+  color: white;
+  transform: rotate(-15deg);
+}
+
+.fa-sun {
+  color: orange;
+  transform: rotate(-8deg);
 }
 
 #return-to-top {
