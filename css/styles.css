@@ -12,6 +12,15 @@
   background-color: hsla(9.1, 100%, 63.9%, 0.8);
 }
 
+#conditional-nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 1000;
+  text-align: right;
+}
 /*
 
 Animations, keyframes, transitions
@@ -51,6 +60,10 @@ nav ul li {
   transition: transform 150ms linear, background-color 150ms linear;
 }
 
+#return-to-top {
+  transition: border-bottom-width 150ms linear, margin 150ms linear;
+}
+
 .more-info-button {
   animation: pulse 1500ms infinite;
   transition: transform 150ms linear;
@@ -70,6 +83,10 @@ nav ul li {
 
 .fade-longer {
   animation: fade-delayed 3s 1;
+}
+
+.fade-out {
+  animation: fade-out 850ms 1;
 }
 
 .em-new_moon,
@@ -134,6 +151,16 @@ nav ul li {
   }
 }
 
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes wave {
   /* The emoji hand in Contact */
   0% {
@@ -168,24 +195,41 @@ Buttons
   Toggles day/night mode
   Powered in part by Javascript
   */
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-  z-index: 1000;
-  font-size: 150%;
   background-color: transparent;
   border: 0;
+  outline: 0;
   cursor: pointer;
   border-radius: 70px;
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   background-color: hsla(215, 19%, 6%, 0.98);
   line-height: 0.9;
+  font-size: 115%;
 }
 
 #toggle-button:hover {
   transform: scale(1.1);
   background-color: hsla(215, 19%, 12%, 0.98);
+}
+
+#return-to-top {
+  /* Not an actual button, styled to look like one */
+  margin-right: 1em;
+  background-color: tomato;
+  padding: 6px 12px;
+  backdrop-filter: blur(3px);
+  border-radius: 9px;
+  border-bottom: 5px solid hsl(9, 59%, 51%);
+  border-bottom-width: 5px;
+  text-transform: lowercase;
+  font-size: 115%;
+  color: white;
+  opacity: 0.98;
+}
+
+#return-to-top:active {
+  margin-top: 2px;
+  border-bottom-width: 2px;
 }
 
 .more-info-button {
@@ -276,12 +320,6 @@ footer {
   margin: 0 20vw;
 }
 
-header {
-  font-size: 160%;
-  display: flex;
-  justify-content: space-between;
-}
-
 footer {
   font-size: 90%;
   font-weight: bold;
@@ -322,7 +360,7 @@ h3 {
 }
 
 h4 {
-  font-size: 120%;
+  font-size: 140%;
   font-weight: 100;
 }
 
@@ -333,7 +371,8 @@ h1 > span:nth-child(1) {
   font-size: 70%;
 }
 
-em {
+em,
+strong {
   font-family: inherit;
 }
 
@@ -347,7 +386,7 @@ GLOBAL CLASSES
   font-family: "Prata", serif;
 }
 
-.small-screen {
+.mater .small-screen {
   display: inline;
 }
 
@@ -425,16 +464,12 @@ GLOBAL CLASSES
   line-height: 1.8;
 }
 
-.icon {
-  width: 32px;
+.invert {
+  filter: invert(1);
 }
 
-.em {
-  /* 
-  These are emojis from afeld 
-  Similar to Font Awesome
-  */
-  font-size: 75%;
+.high-brightness {
+  filter: brightness(3);
 }
 
 .desat {
@@ -482,6 +517,13 @@ Header
 
 */
 
+header {
+  font-size: 160%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header nav ul {
   list-style-type: none;
   display: flex;
@@ -496,6 +538,12 @@ header nav ul li {
 header nav ul li:hover {
   color: black;
   transform: translateY(-4px);
+}
+
+header nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -519,7 +567,7 @@ Section - Works
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 3em 0 6em;
   font-size: 120%;
 
@@ -547,7 +595,7 @@ Section - Works
 .work-preview {
   width: 100%;
   border-radius: 9px;
-  margin-top: 2em;
+  margin-top: 0.5em;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -851,6 +899,7 @@ Responsive
 
   header {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   header nav ul {
@@ -876,7 +925,7 @@ Responsive
   .small-screen {
     display: block;
   }
-
+  .work-card .more-info h4:nth-child(3),
   .work-preview {
     display: none;
   }

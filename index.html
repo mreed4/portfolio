@@ -7,24 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Off site icons, fonts, etc. -->
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c41c81dd84.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <script src="js/scripts.js" async></script>
     <!--https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup-->
   </head>
 
-  <body>
-    <button id="toggle-button">
-      <i class="em em-new_moon"></i>
-    </button>
+  <body id="top">
+    <div id="conditional-nav">
+      <a href="#top" id="return-to-top" class="hidden bold"><span class="prata">&uarr;</span> Top</a>
+      <button id="toggle-button">
+        <i class="em em-new_moon"></i>
+      </button>
+    </div>
     <header class="no-select">
       <div><a class="more-contrast" href="">Matthew Reed</a></div>
       <nav>
         <ul>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -47,6 +53,7 @@
             <li><a href="#struttgart">Club Struttgart</a></li>
             <li><a href="#design-system">Design System</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#flexco">#Flexco</a></li>
           </ol>
         </nav>
         <hr />
@@ -73,11 +80,12 @@
             <div class="hidden more-info">
               <h4 class="more-contrast">Notes</h4>
               <p class="smaller">
-                Unfortunately and unsurprisingly, I do not own a Porsche &hellip;
-                <i class="em em-upside_down_face" aria-role="presentation" aria-label="UPSIDE-DOWN FACE"></i>. Thankfully I can see in
-                color&mdash;the color scheme is inspired by the Porsche brand colors. Overall still needs some work in terms of its
+                Unfortunately and perhaps unsurprisingly, I do not own a Porsche &hellip;
+                <i class="em em-upside_down_face" aria-role="presentation" aria-label="UPSIDE-DOWN FACE"></i>. Thankfully I <em>can</em> see
+                in color&mdash;the color scheme is inspired by the Porsche brand colors. Overall still needs some work in terms of its
                 completeness, but I think it checked all the boxes of this particular project/exercise.
               </p>
+              <h4>Preview</h4>
               <div>
                 <video autoplay loop muted class="work-preview fade" src="./images/works/struttgart.webm" width="500" />
               </div>
@@ -113,6 +121,7 @@
                 I wanted the presentation page itself to be something other than stark white, so I went with a gray and light gray to show
                 off the elements. This page is not responsive&mdash;yet. It also may need some #a11y work in terms of its contrast.
               </p>
+              <h4>Preview</h4>
               <div>
                 <video autoplay loop muted class="work-preview fade" src="./images/works/design-system.webm" width="500" />
               </div>
@@ -145,16 +154,93 @@
             <div class="hidden more-info">
               <h4 class="more-contrast">Notes</h4>
               <p class="smaller">
-                I kid, I kid. This was actually quite fun. Other than designing something that represents or captures my style, the goals
-                were relatively simple: make it responsive, use Git, use CSS to style it, and implement <em>some</em> Javascript. I think I
-                accomplished all the goals! This was probably my most involved hands on project &hellip; but not by much&mdash;I tend to
-                "over-design".
+                This was actually quite fun. Other than designing something that represents or captures my style, the goals were relatively
+                simple: make it responsive, use Git, use CSS to style it, and implement <em>some</em> Javascript. I think I accomplished all
+                the goals! This was probably my most involved hands on project &hellip; but not by much&mdash;I tend to "over-design".
               </p>
-              <div><video autoplay loop muted class="work-preview fade" src="" width="500" />/></div>
+              <h4><s class="less-contrast">Preview</s></h4>
+              <div>
+                <video autoplay loop muted class="work-preview fade" width="500">
+                  <source src="" type="video/webm" />
+                  test
+                </video>
+              </div>
             </div>
           </div>
         </article>
         <hr />
+        <article id="flexco" class="work-card">
+          <span class="work-number no-select">04</span>
+          <div>
+            <h3>#Flexco</h3>
+            <p class="more-contrast">
+              Here the project was to design a company page, using CSS flexbox. Similar to the club project, the company could be imagined
+              or real.
+            </p>
+            <p class="smaller italic">
+              Check it out <a href="https://mreed4.github.io/flex-company/">Live</a>. Browse the
+              <a href="https://github.com/mreed4/flex-company">Repo</a>. If you have a Codecademy account, check out the
+              <a
+                href="https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-making-a-website-responsive/modules/fecp-challenge-project-company-home-page/projects/company-page-with-flexbox"
+                >Project page</a
+              >
+              or the
+              <a href="https://discuss.codecademy.com/t/company-home-page-challenge-project-css-flexbox/462383">forum category</a> about the
+              project.
+            </p>
+            <p class="center">
+              <button class="more-info-button">Expand &darr;</button>
+            </p>
+            <div class="hidden more-info">
+              <h4 class="more-contrast">Notes</h4>
+              <p class="smaller">
+                I used both grid and flex. I also got a little "meta" with this with the name of the company. Ideally I wanted it to look
+                "corporate", but not boring. Initially I based it around an off-red monochrome color scheme, but that just didn't or
+                couldn't work with what I wanted to do with the Tier cards. All of the images are from Pexels I believe. It should be but is
+                not yet responsive. I have yet to go in and add the smooth-scroll to jump around the page. The social media icons at the
+                bottom have a hover state!
+              </p>
+              <h4>Preview</h4>
+              <div>
+                <video autoplay loop muted class="work-preview fade" width="500">
+                  <source src="./images/works/flexco.webm" type="video/webm" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="about">
+        <h2>About</h2>
+        <img id="self" src="./images/self-c.png" alt="Photo of the developer" class="small-screen" />
+        <p class="justify more-contrast">
+          I am a native Californian, born and raised in the Bay Area. I now live in San Diego with my fiancée&mdash;Brittni&mdash;with a
+          little boy on the way. "Ziggy", our feline friend, is named after David Bowie's stage persona.
+        </p>
+        <p class="center">
+          <button class="more-info-button">Learn more &darr;</button>
+        </p>
+        <div class="hidden more-info">
+          <p class="justify">
+            Right now I use <strong class="more-contrast">HTML</strong>, <strong class="more-contrast">CSS</strong>, and small amounts of
+            <strong class="more-contrast">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a
+            long way to go in my Javascript journey.
+          </p>
+          <p class="justify">
+            One of my goals is to develop from scratch a Javascript powered Markdown based blog platform, ideally using Express for the
+            backend. Codecademy Pro, The Odin Project, Free Code Camp, and many other resources are providing me with the knowledge and
+            education so far. I have dabbled off and on [mostly off] in "web design"&mdash;as it used to be called&mdash;for about 20 years
+            now.
+          </p>
+          <div id="tldr-skillset">
+            <h3>tl;dr Skillset</h3>
+            <ul class="no-select">
+              <li><i class="fab fa-html5"></i></li>
+              <li><i class="fab fa-css3-alt"></i></li>
+              <li><i class="fab fa-js"></i></li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section id="contact">
         <h2>Contact</h2>
@@ -169,37 +255,6 @@
         <p class="largest accent center no-select grow">
           <a href="" class="no-underline"><i class="far fa-envelope"></i> <span>hello<em>@</em>madare.co</span></a>
         </p>
-      </section>
-      <section id="about">
-        <h2>About</h2>
-        <img id="self" src="./images/self-c.png" alt="Photo of the developer" class="small-screen" />
-        <p class="justify more-contrast">
-          I am a native Californian, born and raised in the Bay Area. I now live in San Diego with my fiancée&mdash;Brittni&mdash;with a
-          little boy on the way. "Ziggy", our feline friend, is named after David Bowie's stage persona.
-        </p>
-        <p class="center">
-          <button class="more-info-button italic">Learn more&hellip;</button>
-        </p>
-        <div class="hidden more-info">
-          <p class="justify">
-            Right now I use <strong class="more-contrast">HTML</strong>, <strong class="more-contrast">CSS</strong>, and small amounts of
-            <strong class="more-contrast">vanilla Javascript</strong>. I see myself as more of a developer than a designer, though I have a
-            long way to go in my Javascript journey.
-          </p>
-          <p class="justify">
-            One of my goals is to develop from scratch a Javascript powered Markdown based blog platform, ideally using Express for the
-            backend. Codecademy Pro, The Odin Project, Free Code Camp, and many other resources are providing me with the knowledge and
-            education so far. I have dabbled off and on [mostly off] in "web design" as it used to be called for about 20 years now.
-          </p>
-          <div id="tldr-skillset">
-            <h3>tl;dr Skillset</h3>
-            <ul class="no-select">
-              <li><i class="fab fa-html5"></i></li>
-              <li><i class="fab fa-css3-alt"></i></li>
-              <li><i class="fab fa-js"></i></li>
-            </ul>
-          </div>
-        </div>
       </section>
     </main>
     <footer class="center no-select">

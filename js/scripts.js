@@ -24,6 +24,19 @@ https://tinyurl.com/2wxpcvrd
   });
 };
 
+const returnToTop = () => {
+  let returnButton = document.getElementById(`return-to-top`);
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+      returnButton.classList.remove(`hidden`);
+      returnButton.classList.add(`fade`);
+    } else {
+      returnButton.classList.add(`hidden`);
+    }
+  };
+};
+
 const moreInfo = () => {
   /*
 
@@ -110,9 +123,51 @@ const externalLinks = () => {
   });
 };
 
+const scrollIndicator = () => {
+  /* 
+  
+  Scroll indicator
+  https://www.geeksforgeeks.org/how-to-create-scroll-indicator-using-html-css-and-javascript/
+
+*/
+  window.addEventListener("scroll", moveScrollIndicator);
+  const scrollIndicatorElt = document.getElementById("scrollIndicator");
+  const maxHeight = window.document.body.scrollHeight - window.innerHeight;
+
+  function moveScrollIndicator(e) {
+    const percentage = (window.scrollY / maxHeight) * 100;
+    scrollIndicatorElt.style.width = percentage + "%";
+  }
+};
+
+const hoverSelf = () => {
+  let self = document.getElementById(`self`);
+
+  self.addEventListener(`mouseover`, () => {
+    self.setAttribute(`src`, `./images/self-sq.jpg`);
+    window.setTimeout(() => {
+      self.classList.add(`fade`);
+    }, 25);
+    self.classList.remove(`fade`);
+  });
+
+  self.addEventListener(`mouseout`, () => {
+    self.setAttribute(`src`, `./images/self-c.png`);
+    window.setTimeout(() => {
+      self.classList.add(`fade`);
+    }, 25);
+    self.classList.remove(`fade`);
+  });
+};
+
 body.onload = function () {
   smoothScroll();
   moreInfo();
   dayNightToggle();
   externalLinks();
+  returnToTop();
+  /*
+  hoverSelf();
+  scrollIndicator();
+  */
 };
